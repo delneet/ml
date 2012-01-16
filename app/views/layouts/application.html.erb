@@ -26,7 +26,7 @@
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -40,19 +40,24 @@
 <body>
 
   <div id="container" class="container">
-    <div class="hero-unit">
-      Welcome
-    </div>
-    
     <header>
-      <nav><%= link_to "News", news_path %> | Tips | Motoladies | Contact</nav>
+      <img />
     </header>
     
     <div class="row">
-      <div id="main" role="main">
-        <%= yield %>
+      <div class="span16">
+        <nav><%= link_to "News", news_path %> | Tips | Motoladies | Contact</nav>
       </div>
     </div>
+    <br />
+    
+    <div class="hero-unit">
+      Welcome
+    </div>
+        
+    <div id="main" role="main" class="content">
+      <%= yield %>
+    </div>    
     
     <footer>
       &copy; Motolady 2010

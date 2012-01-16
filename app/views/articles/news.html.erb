@@ -1,9 +1,11 @@
 <h1>News</h1>
-<div class="row">
-  <% @articles.each do |article| %>
-  <div class="span4">
-    <h2><%= link_to article.title, news_item_path(article) %></h2>
-    <p><%= article.summary %></p>
+<% @articles.each_slice(4) do |slice| %>
+  <div class="row">
+    <% slice.each do |article| %>
+      <div class="span-one-third">
+        <h2><%= link_to article.title, news_item_path(article) %></h2>
+        <p><%= article.summary.html_safe %></p>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
+<% end %>
