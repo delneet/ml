@@ -1,0 +1,9 @@
+<h1>News</h1>
+<div class="row">
+  <% @articles.each do |article| %>
+  <div class="span4">
+    <h2><%= link_to article.title, news_item_path(article) %></h2>
+    <p><%= article.summary %></p>
+  </div>
+  <% end %>
+</div>

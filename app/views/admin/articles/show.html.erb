@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @article.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @article.body %>
+</p>
+
+<p>
+  <b>Meta tags:</b>
+  <%= @article.meta_tags %>
+</p>
+
+<p>
+  <b>Meta description:</b>
+  <%= @article.meta_description %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @article.image %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @article.summary %>
+</p>
+
+<p>
+  <b>Slug:</b>
+  <%= @article.slug %>
+</p>
+
+<p>
+  <b>Published on:</b>
+  <%= @article.published_on %>
+</p>
+
+<p>
+  <b>Start publication on:</b>
+  <%= @article.start_publication_on %>
+</p>
+
+<p>
+  <b>Stop publication on:</b>
+  <%= @article.stop_publication_on %>
+</p>
+
+<p>
+  <b>Featured:</b>
+  <%= @article.featured %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+<%= link_to 'Back', admin_articles_path %>
